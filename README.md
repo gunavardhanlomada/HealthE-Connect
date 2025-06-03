@@ -1,79 +1,75 @@
-Health E-Connect
+<div>
 
-This is a Java web application built using Servlets and JSP, packaged using Maven, and deployed on Apache Tomcat 9. It connects to a relational database and performs standard web operations.
-#
-🛠️ Technologies Used
+  <h1>Health E-Connect</h1>
 
-Java (Servlets & JSP)
+  <p>This is a Java web application built using Servlets and JSP, packaged using Maven, and deployed on Apache Tomcat 9. It connects to a relational database and performs standard web operations.</p>
 
-Apache Maven
+  <h2>🛠️ Technologies Used</h2>
+  <ul>
+    <li>Java (Servlets & JSP)</li>
+    <li>Apache Maven</li>
+    <li>Apache Tomcat 9.x</li>
+    <li>MySQL</li>
+    <li>HTML/CSS (for frontend)</li>
+    <li>JDBC</li>
+  </ul>
 
-Apache Tomcat 9.x
-
-MySQL
-
-HTML/CSS (for frontend)
-
-JDBC
-
-Project Structure
-
-/project-root
+  <h2>📁 Project Structure</h2>
+  <pre>/project-root
 │
 ├── src/main/java          # Java source files (Servlets, utils, etc.)
 ├── src/main/webapp        # JSP files and web resources
 ├── pom.xml                # Maven configuration file
-└── Database.sql           # SQL file to initialize the database
+└── Database.sql           # SQL file to initialize the database</pre>
 
-
-1. Clone the Repository
-
+  <h2>📥 1. Clone the Repository</h2>
+  <pre>
 git clone https://github.com/gunavardhanlomada/HealthE-Connect
 cd HealthE-Connect
-#
-2. Set Up the Database
+  </pre>
 
-Make sure MySQL or your preferred RDBMS is running.
-
-Create a database (e.g., health).
-
-Execute the SQL script:
-
+  <h2>🗃️ 2. Set Up the Database</h2>
+  <ol>
+    <li>Make sure MySQL or your preferred RDBMS is running.</li>
+    <li>Create a database (e.g., <code>health</code>).</li>
+    <li>Execute the SQL script:</li>
+  </ol>
+  <pre>
 -- Using MySQL CLI
 SOURCE database.sql;
+  </pre>
+  <p><strong>🔍 Note:</strong> Update the database connection details (DB name, user, password) in your Java code or a configuration file (like <code>DBConnection.java</code>).</p>
 
-🔍 Note: Update the database connection details (DB name, user, password) in your Java code or a configuration file (like DBConnection.java).
-#
-3. Install Prerequisites
+  <h2>🔧 3. Install Prerequisites</h2>
+  <ul>
+    <li><a href="https://maven.apache.org/install.html" target="_blank">Maven</a></li>
+    <li><a href="https://tomcat.apache.org/download-90.cgi" target="_blank">Tomcat 9.x</a></li>
+  </ul>
+  <p>Make sure to set environment variables like <code>MAVEN_HOME</code> and <code>CATALINA_HOME</code>.</p>
 
-Maven: https://maven.apache.org/install.html
-
-Tomcat 9.x: https://tomcat.apache.org/download-90.cgiMake sure to set environment variables like MAVEN_HOME and CATALINA_HOME.
-#
-4. Build the Project
-
+  <h2>🏗️ 4. Build the Project</h2>
+  <pre>
 mvn clean install
-or
+# or
 mvn clean package
-and 
+# or
 mvn clean build
+  </pre>
+  <p>This will generate a <code>.war</code> file inside the <code>target/</code> directory.</p>
 
-
-This will generate a .war file inside the target/ directory.
-#
-5. Deploy on Tomcat
-
-Copy the generated .war file (e.g., myapp.war) to TOMCAT_HOME/webapps/.
-
-Start Tomcat:
-
+  <h2>🚀 5. Deploy on Tomcat</h2>
+  <ol>
+    <li>Copy the generated <code>.war</code> file (e.g., <code>myapp.war</code>) to <code>$TOMCAT_HOME/webapps/</code>.</li>
+    <li>Start Tomcat:</li>
+  </ol>
+  <pre>
 cd $CATALINA_HOME/bin
 ./startup.sh  # Linux/macOS
 startup.bat   # Windows
+  </pre>
+  <p>Open your browser and visit: <a href="http://localhost:8080/Health-E-Connect" target="_blank">http://localhost:8080/Health-E-Connect</a></p>
 
-Open your browser and visit:http://localhost:8080/Health-E-Connect
-#
-🔪 Testing the Application
+  <h2>🧪 Testing the Application</h2>
+  <p>Once deployed, you can interact with the application via its web interface. Make sure your DB server is running and the configuration matches your DB settings.</p>
 
-Once deployed, you can interact with the application via its web interface. Make sure your DB server is running and the configuration matches your DB settings.
-
+</div>
